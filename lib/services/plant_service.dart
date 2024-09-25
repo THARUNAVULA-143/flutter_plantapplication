@@ -3,7 +3,7 @@ import '../models/plant.dart';
 class PlantService {
   Future<List<Plant>> getPlants() async {
     // Simulating API call
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 2));
     return [
       Plant(
         id: '1',

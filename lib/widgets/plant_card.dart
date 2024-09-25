@@ -5,7 +5,7 @@ import '../screens/plant_details_screen.dart';
 class PlantCard extends StatelessWidget {
   final Plant plant;
 
-  PlantCard({required this.plant});
+  const PlantCard({super.key, required this.plant});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class PlantCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             ClipRRect(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(15)),
               child: Image.network(
                 plant.imageUrl,
                 height: 120,
@@ -35,23 +35,23 @@ class PlantCard extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                     plant.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     '\$${plant.price.toStringAsFixed(2)}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.green,
                       fontSize: 14,
                     ),

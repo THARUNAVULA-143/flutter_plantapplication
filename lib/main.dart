@@ -14,6 +14,8 @@ void main() {
 }
 
 class PlantsShoppingApp extends StatelessWidget {
+  const PlantsShoppingApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

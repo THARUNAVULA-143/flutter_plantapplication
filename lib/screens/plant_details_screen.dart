@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 class PlantDetailsScreen extends StatelessWidget {
   final Plant plant;
 
-  PlantDetailsScreen({required this.plant});
+  const PlantDetailsScreen({super.key, required this.plant});
 
   @override
   Widget build(BuildContext context) {
@@ -32,27 +32,27 @@ class PlantDetailsScreen extends StatelessWidget {
                     plant.name,
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     '\$${plant.price.toStringAsFixed(2)}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                       color: Colors.green,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Text(
                     plant.description,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   ElevatedButton(
-                    child: Text('Add to Cart'),
+                    child: const Text('Add to Cart'),
                     onPressed: () {
                       Provider.of<Cart>(context, listen: false).addItem(plant);
                       ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('Added to cart!')),
+                        const SnackBar(content: Text('Added to cart!')),
                       );
                     },
                   ),
